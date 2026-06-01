@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
 
-  spec.name         = "MyFramework"
+  spec.name         = "BlackSpartan"
   spec.version      = "0.1.0"
   spec.summary      = "Framework para iOS"
 
@@ -10,19 +10,23 @@ Pod::Spec.new do |spec|
 
   spec.homepage     = "https://github.com/JosPerez/BlackSpartan"
 
-  spec.license      = { :type => "MIT" }
+  spec.license      = spec.license = {
+      :type => "MIT",
+      :file => "LICENSE"
+    }
 
   spec.author       = { "Jose Perez" => "jos.perez.mtz@gmail.com" }
 
   spec.platform     = :ios, "16.0"
 
   spec.source       = {
-    :git => "https://github.com/usuario/MyFramework.git",
-    :tag => spec.version.to_s
+    :git => "https://github.com/JosPerez/BlackSpartan.git",
+    :tag => "0.1.0"
   }
 
-  spec.source_files = "Sources/**/*.{swift}"
+  spec.source_files = "BlackSpartan/**/*.{swift}"
 
   spec.swift_version = "5.9"
 
 end
+
