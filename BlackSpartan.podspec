@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "BlackSpartan"
-  spec.version      = "0.4.0"
+  spec.version      = "0.5.0"
   spec.summary      = "Framework para iOS"
 
   spec.description  = <<-DESC
@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
 
   spec.source       = {
     :git => "https://github.com/JosPerez/BlackSpartan.git",
-    :tag => "0.1.0"
+    :tag => spec.version.to_s
   }
 
   spec.source_files = "BlackSpartan/**/*.{swift}"
