@@ -27,7 +27,7 @@ enum BSResponeCode {
     /// Caso respuesta Fallida con código,
     case failed(code: Int)
     public init(rawValue: Int) {
-        if rawValue == 200 {
+        if (200...299).contains(rawValue) {
             self = .success
         } else {
             self = .failed(code: rawValue)

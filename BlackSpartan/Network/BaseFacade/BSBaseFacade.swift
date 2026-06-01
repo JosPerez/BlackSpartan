@@ -58,20 +58,38 @@ open class BSBaseFacade {
             }
         }
     }
-    /// Decode de la entidad de forma segura.
+    /// Petición ´GET´ para consultas de usuarios .
     ///  - Parameters:
-    ///    - responseType: Tipo Entidad.
+    ///    - uri: String con el uri necesitado
+    ///    - isTokenSecure: En caso de requerir el token
     func getRequest(uri: String, isTokenSecure:Bool=true) throws -> URLRequest {
         let newUrl: String = url + uri
         guard let mainUrl = URL(string: newUrl) else {
             throw BSFacadeError.missingUrl
         }
-        print("petición a: \(mainUrl)")
+        print("petición GET a: \(mainUrl)")
         var request: URLRequest = URLRequest(url: mainUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30.0)
         request.httpMethod = "GET"
         if isTokenSecure {
-            request.setValue(Keys().apiKey, forHTTPHeaderField: "token")
+            request.setValue(Keys().apiKey, forHTTPHeaderField: "X-API-Key")
         }
+        return request
+    }
+    /// Petición ´POST´ para consultas de usuarios .
+    ///  - Parameters:
+    ///    - uri: String con el uri necesitado
+    ///    - isTokenSecure: En caso de requerir el token
+    func postRequest(uri: String, body: Data) throws -> URLRequest {
+        let newUrl: String = url + uri
+        guard let mainUrl = URL(string: newUrl) else {
+            throw BSFacadeError.missingUrl
+        }
+        print("petición POST a: \(mainUrl)")
+        var request = URLRequest(url: mainUrl, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 30.0)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue(Keys().apiKey, forHTTPHeaderField: "X-API-Key")
+        request.httpBody = body
         return request
     }
 }

@@ -16,6 +16,10 @@
 		072C52B02FCCE7DC00FEEACD /* BSURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52AF2FCCE7DC00FEEACD /* BSURLSession.swift */; };
 		072C52B22FCCE82700FEEACD /* BSBaseFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52B12FCCE82700FEEACD /* BSBaseFacade.swift */; };
 		072C52B52FCCE8F900FEEACD /* API Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52B42FCCE8F900FEEACD /* API Key.swift */; };
+		072C52BB2FCD38DE00FEEACD /* BSFighterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52BA2FCD38DE00FEEACD /* BSFighterModel.swift */; };
+		072C52BD2FCD391A00FEEACD /* BSFighterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52BC2FCD391A00FEEACD /* BSFighterService.swift */; };
+		072C52C12FCD509400FEEACD /* BSPredictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52C02FCD509400FEEACD /* BSPredictModel.swift */; };
+		072C52C42FCD50B900FEEACD /* BSPredictFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52C32FCD50B900FEEACD /* BSPredictFacade.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,10 @@
 		072C52AF2FCCE7DC00FEEACD /* BSURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSURLSession.swift; sourceTree = "<group>"; };
 		072C52B12FCCE82700FEEACD /* BSBaseFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSBaseFacade.swift; sourceTree = "<group>"; };
 		072C52B42FCCE8F900FEEACD /* API Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Key.swift"; sourceTree = "<group>"; };
+		072C52BA2FCD38DE00FEEACD /* BSFighterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSFighterModel.swift; sourceTree = "<group>"; };
+		072C52BC2FCD391A00FEEACD /* BSFighterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSFighterService.swift; sourceTree = "<group>"; };
+		072C52C02FCD509400FEEACD /* BSPredictModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPredictModel.swift; sourceTree = "<group>"; };
+		072C52C32FCD50B900FEEACD /* BSPredictFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPredictFacade.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,19 +117,20 @@
 		072C52AB2FCCE74D00FEEACD /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				072C52AE2FCCE79E00FEEACD /* BaseClass */,
+				072C52B62FCD389300FEEACD /* Services */,
+				072C52AE2FCCE79E00FEEACD /* BaseFacade */,
 				072C52AC2FCCE76600FEEACD /* BSNetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		072C52AE2FCCE79E00FEEACD /* BaseClass */ = {
+		072C52AE2FCCE79E00FEEACD /* BaseFacade */ = {
 			isa = PBXGroup;
 			children = (
 				072C52AF2FCCE7DC00FEEACD /* BSURLSession.swift */,
 				072C52B12FCCE82700FEEACD /* BSBaseFacade.swift */,
 			);
-			path = BaseClass;
+			path = BaseFacade;
 			sourceTree = "<group>";
 		};
 		072C52B32FCCE8DB00FEEACD /* Constant */ = {
@@ -130,6 +139,65 @@
 				072C52B42FCCE8F900FEEACD /* API Key.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		072C52B62FCD389300FEEACD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				072C52BE2FCD506700FEEACD /* PredictFight */,
+				072C52B72FCD38B500FEEACD /* Fighters */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		072C52B72FCD38B500FEEACD /* Fighters */ = {
+			isa = PBXGroup;
+			children = (
+				072C52B92FCD38C300FEEACD /* Facade */,
+				072C52B82FCD38BE00FEEACD /* Model */,
+			);
+			path = Fighters;
+			sourceTree = "<group>";
+		};
+		072C52B82FCD38BE00FEEACD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				072C52BA2FCD38DE00FEEACD /* BSFighterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		072C52B92FCD38C300FEEACD /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				072C52BC2FCD391A00FEEACD /* BSFighterService.swift */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		072C52BE2FCD506700FEEACD /* PredictFight */ = {
+			isa = PBXGroup;
+			children = (
+				072C52C22FCD509F00FEEACD /* Facade */,
+				072C52BF2FCD506F00FEEACD /* Model */,
+			);
+			path = PredictFight;
+			sourceTree = "<group>";
+		};
+		072C52BF2FCD506F00FEEACD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				072C52C02FCD509400FEEACD /* BSPredictModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		072C52C22FCD509F00FEEACD /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				072C52C32FCD50B900FEEACD /* BSPredictFacade.swift */,
+			);
+			path = Facade;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,7 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072C52BD2FCD391A00FEEACD /* BSFighterService.swift in Sources */,
+				072C52BB2FCD38DE00FEEACD /* BSFighterModel.swift in Sources */,
+				072C52C12FCD509400FEEACD /* BSPredictModel.swift in Sources */,
 				072C52B22FCCE82700FEEACD /* BSBaseFacade.swift in Sources */,
+				072C52C42FCD50B900FEEACD /* BSPredictFacade.swift in Sources */,
 				072C52932FCCE64300FEEACD /* BlackSpartan.docc in Sources */,
 				072C52B02FCCE7DC00FEEACD /* BSURLSession.swift in Sources */,
 				072C52B52FCCE8F900FEEACD /* API Key.swift in Sources */,
