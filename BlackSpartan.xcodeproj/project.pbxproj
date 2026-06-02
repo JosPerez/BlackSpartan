@@ -20,6 +20,7 @@
 		072C52BD2FCD391A00FEEACD /* BSFighterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52BC2FCD391A00FEEACD /* BSFighterService.swift */; };
 		072C52C12FCD509400FEEACD /* BSPredictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52C02FCD509400FEEACD /* BSPredictModel.swift */; };
 		072C52C42FCD50B900FEEACD /* BSPredictFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52C32FCD50B900FEEACD /* BSPredictFacade.swift */; };
+		07841B0E2FCEBFE8005EA7FD /* BSFighterProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B0D2FCEBFE8005EA7FD /* BSFighterProfileModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		072C52BC2FCD391A00FEEACD /* BSFighterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSFighterService.swift; sourceTree = "<group>"; };
 		072C52C02FCD509400FEEACD /* BSPredictModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPredictModel.swift; sourceTree = "<group>"; };
 		072C52C32FCD50B900FEEACD /* BSPredictFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPredictFacade.swift; sourceTree = "<group>"; };
+		07841B0D2FCEBFE8005EA7FD /* BSFighterProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSFighterProfileModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				072C52BA2FCD38DE00FEEACD /* BSFighterModel.swift */,
+				07841B0D2FCEBFE8005EA7FD /* BSFighterProfileModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				072C52932FCCE64300FEEACD /* BlackSpartan.docc in Sources */,
 				072C52B02FCCE7DC00FEEACD /* BSURLSession.swift in Sources */,
 				072C52B52FCCE8F900FEEACD /* API Key.swift in Sources */,
+				07841B0E2FCEBFE8005EA7FD /* BSFighterProfileModel.swift in Sources */,
 				072C52AA2FCCE6F600FEEACD /* BSUserDefaults.swift in Sources */,
 				072C52AD2FCCE76600FEEACD /* BSNetworkManager.swift in Sources */,
 			);

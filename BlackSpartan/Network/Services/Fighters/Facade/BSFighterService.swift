@@ -10,8 +10,9 @@ import Foundation
 final public class BSFighterService: BSBaseFacade {
 
     enum RequestName {
-        static let list   = "getFighters"
-        static let detail = "getFighterDetail"
+        static let list    = "getFighters"
+        static let detail  = "getFighterDetail"
+        static let profile = "getFighterProfile"
     }
 
     public func getFighters(weightClass: String? = nil, limit: Int = 20, offset: Int = 0) {
@@ -35,6 +36,16 @@ final public class BSFighterService: BSBaseFacade {
             recievedError(error: error, code: nil, requestName: RequestName.detail)
         }
     }
+
+    public func getFighterProfile(id: Int) {
+        do {
+            let request = try getRequest(uri: "/fighters/\(id)/profile")
+            connection.delegate = self
+            connection.sendRequest(request: request, requestName: RequestName.profile)
+        } catch {
+            recievedError(error: error, code: nil, requestName: RequestName.profile)
+        }
+    }
 }
 
 extension BSFighterService: BSConnectionDelegate {
@@ -44,6 +55,8 @@ extension BSFighterService: BSConnectionDelegate {
             decodeEntity(responseType: [BSFighter].self, data: data, requestName: requestName)
         case RequestName.detail:
             decodeEntity(responseType: BSFighterDetail.self, data: data, requestName: requestName)
+        case RequestName.profile:
+            decodeEntity(responseType: BSFighterProfile.self, data: data, requestName: requestName)
         default: break
         }
     }
