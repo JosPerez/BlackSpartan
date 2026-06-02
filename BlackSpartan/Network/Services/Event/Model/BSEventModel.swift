@@ -12,12 +12,14 @@ public struct BSEvent: Codable, Identifiable {
     public let name: String
     public let eventDate: String
     public let fightCount: Int
+    public let titleFights: Int
 
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case eventDate  = "event_date"
         case fightCount = "fight_count"
+        case titleFights = "title_fights"
     }
 }
 
