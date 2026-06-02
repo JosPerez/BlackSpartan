@@ -21,6 +21,8 @@
 		072C52C12FCD509400FEEACD /* BSPredictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52C02FCD509400FEEACD /* BSPredictModel.swift */; };
 		072C52C42FCD50B900FEEACD /* BSPredictFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072C52C32FCD50B900FEEACD /* BSPredictFacade.swift */; };
 		07841B0E2FCEBFE8005EA7FD /* BSFighterProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B0D2FCEBFE8005EA7FD /* BSFighterProfileModel.swift */; };
+		07841B132FCEE1AC005EA7FD /* BSEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B122FCEE1AC005EA7FD /* BSEventModel.swift */; };
+		07841B162FCEE1DB005EA7FD /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B152FCEE1DB005EA7FD /* EventService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		072C52C02FCD509400FEEACD /* BSPredictModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPredictModel.swift; sourceTree = "<group>"; };
 		072C52C32FCD50B900FEEACD /* BSPredictFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSPredictFacade.swift; sourceTree = "<group>"; };
 		07841B0D2FCEBFE8005EA7FD /* BSFighterProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSFighterProfileModel.swift; sourceTree = "<group>"; };
+		07841B122FCEE1AC005EA7FD /* BSEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSEventModel.swift; sourceTree = "<group>"; };
+		07841B152FCEE1DB005EA7FD /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 		072C52B62FCD389300FEEACD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				07841B102FCEE196005EA7FD /* Event */,
 				072C52BE2FCD506700FEEACD /* PredictFight */,
 				072C52B72FCD38B500FEEACD /* Fighters */,
 			);
@@ -201,6 +206,31 @@
 				072C52C32FCD50B900FEEACD /* BSPredictFacade.swift */,
 			);
 			path = Facade;
+			sourceTree = "<group>";
+		};
+		07841B102FCEE196005EA7FD /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				07841B142FCEE1D0005EA7FD /* Service */,
+				07841B112FCEE19E005EA7FD /* Model */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		07841B112FCEE19E005EA7FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07841B122FCEE1AC005EA7FD /* BSEventModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07841B142FCEE1D0005EA7FD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				07841B152FCEE1DB005EA7FD /* EventService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +351,9 @@
 				072C52B02FCCE7DC00FEEACD /* BSURLSession.swift in Sources */,
 				072C52B52FCCE8F900FEEACD /* API Key.swift in Sources */,
 				07841B0E2FCEBFE8005EA7FD /* BSFighterProfileModel.swift in Sources */,
+				07841B132FCEE1AC005EA7FD /* BSEventModel.swift in Sources */,
 				072C52AA2FCCE6F600FEEACD /* BSUserDefaults.swift in Sources */,
+				07841B162FCEE1DB005EA7FD /* EventService.swift in Sources */,
 				072C52AD2FCCE76600FEEACD /* BSNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
