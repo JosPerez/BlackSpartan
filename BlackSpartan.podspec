@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "BlackSpartan"
-  spec.version      = "0.9.0"
+  spec.version      = "1.0.0"
   spec.summary      = "Framework para iOS"
 
   spec.description  = <<-DESC
@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.author       = { "Jose Perez" => "jos.perez.mtz@gmail.com" }
 
-  spec.platform     = :ios, "16.0"
+  spec.platform     = :ios, "17.0"
 
   spec.source       = {
     :git => "https://github.com/JosPerez/BlackSpartan.git",
