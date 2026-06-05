@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "BlackSpartan"
-  spec.version      = "1.2.0"
+  spec.version      = "1.2.1"
   spec.summary      = "Framework para iOS"
 
   spec.description  = <<-DESC
