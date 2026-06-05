@@ -23,6 +23,8 @@
 		07841B0E2FCEBFE8005EA7FD /* BSFighterProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B0D2FCEBFE8005EA7FD /* BSFighterProfileModel.swift */; };
 		07841B132FCEE1AC005EA7FD /* BSEventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B122FCEE1AC005EA7FD /* BSEventModel.swift */; };
 		07841B162FCEE1DB005EA7FD /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B152FCEE1DB005EA7FD /* EventService.swift */; };
+		07841B4E2FD2B119005EA7FD /* BSRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B4D2FD2B119005EA7FD /* BSRankingModel.swift */; };
+		07841B502FD2B132005EA7FD /* BSRankingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07841B4F2FD2B132005EA7FD /* BSRankingService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		07841B0D2FCEBFE8005EA7FD /* BSFighterProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSFighterProfileModel.swift; sourceTree = "<group>"; };
 		07841B122FCEE1AC005EA7FD /* BSEventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSEventModel.swift; sourceTree = "<group>"; };
 		07841B152FCEE1DB005EA7FD /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		07841B4D2FD2B119005EA7FD /* BSRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSRankingModel.swift; sourceTree = "<group>"; };
+		07841B4F2FD2B132005EA7FD /* BSRankingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSRankingService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,7 @@
 		072C52B62FCD389300FEEACD /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				07841B4A2FD2B0EA005EA7FD /* Rankings */,
 				07841B102FCEE196005EA7FD /* Event */,
 				072C52BE2FCD506700FEEACD /* PredictFight */,
 				072C52B72FCD38B500FEEACD /* Fighters */,
@@ -231,6 +236,31 @@
 				07841B152FCEE1DB005EA7FD /* EventService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		07841B4A2FD2B0EA005EA7FD /* Rankings */ = {
+			isa = PBXGroup;
+			children = (
+				07841B4C2FD2B0FA005EA7FD /* Model */,
+				07841B4B2FD2B0F3005EA7FD /* Facade */,
+			);
+			path = Rankings;
+			sourceTree = "<group>";
+		};
+		07841B4B2FD2B0F3005EA7FD /* Facade */ = {
+			isa = PBXGroup;
+			children = (
+				07841B4F2FD2B132005EA7FD /* BSRankingService.swift */,
+			);
+			path = Facade;
+			sourceTree = "<group>";
+		};
+		07841B4C2FD2B0FA005EA7FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07841B4D2FD2B119005EA7FD /* BSRankingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				072C52BD2FCD391A00FEEACD /* BSFighterService.swift in Sources */,
+				07841B4E2FD2B119005EA7FD /* BSRankingModel.swift in Sources */,
 				072C52BB2FCD38DE00FEEACD /* BSFighterModel.swift in Sources */,
 				072C52C12FCD509400FEEACD /* BSPredictModel.swift in Sources */,
 				072C52B22FCCE82700FEEACD /* BSBaseFacade.swift in Sources */,
@@ -350,6 +381,7 @@
 				072C52932FCCE64300FEEACD /* BlackSpartan.docc in Sources */,
 				072C52B02FCCE7DC00FEEACD /* BSURLSession.swift in Sources */,
 				072C52B52FCCE8F900FEEACD /* API Key.swift in Sources */,
+				07841B502FD2B132005EA7FD /* BSRankingService.swift in Sources */,
 				07841B0E2FCEBFE8005EA7FD /* BSFighterProfileModel.swift in Sources */,
 				07841B132FCEE1AC005EA7FD /* BSEventModel.swift in Sources */,
 				072C52AA2FCCE6F600FEEACD /* BSUserDefaults.swift in Sources */,
