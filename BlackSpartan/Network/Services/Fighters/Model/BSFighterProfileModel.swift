@@ -74,6 +74,8 @@ public struct BSFighterProfile: Codable, Identifiable {
         case physical
         case recentFights  = "recent_fights"
         case fightingStyleData = "fighting_style_data"
+        case currentElo     = "current_elo"
+        case currentRank     = "current_rank"
 
     }
 }
