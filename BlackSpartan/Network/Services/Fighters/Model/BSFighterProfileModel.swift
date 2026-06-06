@@ -38,6 +38,9 @@ public struct BSFighterProfile: Codable, Identifiable {
     // Últimas peleas
     public let recentFights: [BSRecentFight]
     public let fightingStyleData: BSFightingStyleData?
+    // Elo
+    public let currentElo: Double?
+    public let currentRank: Int?
 
     public var fullName: String { "\(firstName) \(lastName)" }
     public var initials: String {
@@ -159,6 +162,7 @@ public struct BSRecentFight: Codable, Identifiable {
     public let takedownsAttempted: Int
     public let subAttempts: Int
     public let ctrlTimeSecs: Int
+    public let opponentImg: String?
 
     public var id: Int { fightId }
 
@@ -182,6 +186,7 @@ public struct BSRecentFight: Codable, Identifiable {
         case takedownsAttempted = "takedowns_attempted"
         case subAttempts        = "sub_attempts"
         case ctrlTimeSecs       = "ctrl_time_secs"
+        case opponentImg = "opponent_img"
     }
 }
 
