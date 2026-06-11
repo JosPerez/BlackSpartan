@@ -30,18 +30,24 @@ public struct Prediction: Codable {
     public let fighterAWinProb: Double
     public let fighterBWinProb: Double
     public let confidence: String
+    public let modelUsed: String
     public let topFactors: [PredictionFactor]
+    public let outcome: OutcomePrediction?
+    public let method: MethodPrediction?
     public let warning: String?
 
     enum CodingKeys: String, CodingKey {
-        case fighterAId    = "fighter_a_id"
-        case fighterBId    = "fighter_b_id"
-        case fighterAName  = "fighter_a_name"
-        case fighterBName  = "fighter_b_name"
-        case fighterAWinProb = "fighter_a_win_prob"
-        case fighterBWinProb = "fighter_b_win_prob"
+        case fighterAId       = "fighter_a_id"
+        case fighterBId       = "fighter_b_id"
+        case fighterAName     = "fighter_a_name"
+        case fighterBName     = "fighter_b_name"
+        case fighterAWinProb  = "fighter_a_win_prob"
+        case fighterBWinProb  = "fighter_b_win_prob"
         case confidence
-        case topFactors    = "top_factors"
+        case modelUsed        = "model_used"
+        case topFactors       = "top_factors"
+        case outcome
+        case method
         case warning
     }
 }
@@ -50,4 +56,26 @@ public struct PredictionFactor: Codable, Identifiable {
     public var id: String { feature }
     public let feature: String
     public let impact: Double
+}
+
+public struct OutcomePrediction: Codable {
+    public let decisionProb: Double
+    public let finishProb: Double
+
+    enum CodingKeys: String, CodingKey {
+        case decisionProb  = "decision_prob"
+        case finishProb    = "finish_prob"
+    }
+}
+
+public struct MethodPrediction: Codable {
+    public let decisionProb: Double
+    public let koTkoProb: Double
+    public let submissionProb: Double
+
+    enum CodingKeys: String, CodingKey {
+        case decisionProb   = "decision_prob"
+        case koTkoProb      = "ko_tko_prob"
+        case submissionProb = "submission_prob"
+    }
 }
