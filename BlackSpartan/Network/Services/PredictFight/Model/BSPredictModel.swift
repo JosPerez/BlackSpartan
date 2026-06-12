@@ -34,6 +34,7 @@ public struct Prediction: Codable {
     public let topFactors: [PredictionFactor]
     public let outcome: OutcomePrediction?
     public let method: MethodPrediction?
+    public let duration: BSDurationPrediction?
     public let warning: String?
 
     enum CodingKeys: String, CodingKey {
@@ -48,6 +49,7 @@ public struct Prediction: Codable {
         case topFactors       = "top_factors"
         case outcome
         case method
+        case duration
         case warning
     }
 }
@@ -65,6 +67,22 @@ public struct OutcomePrediction: Codable {
     enum CodingKeys: String, CodingKey {
         case decisionProb  = "decision_prob"
         case finishProb    = "finish_prob"
+    }
+}
+
+public struct BSDurationPrediction: Codable {
+    public let r1FinishProb: Double
+    public let r2FinishProb: Double
+    public let r3FinishProb: Double
+    public let lateFinishProb: Double
+    public let decisionProb: Double
+
+    enum CodingKeys: String, CodingKey {
+        case r1FinishProb   = "r1_finish_prob"
+        case r2FinishProb   = "r2_finish_prob"
+        case r3FinishProb   = "r3_finish_prob"
+        case lateFinishProb = "late_finish_prob"
+        case decisionProb   = "decision_prob"
     }
 }
 
